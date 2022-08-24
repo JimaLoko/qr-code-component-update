@@ -11,6 +11,7 @@ btn1.addEventListener('click', () => {
         btn2.children[0].classList.remove('arrow-rotate')
         btn2.parentElement.classList.remove('theme-active')
         btn2.classList.remove('btn-active')
+        tg2.classList.remove("tg2")
     }
     btn1.children[0].classList.toggle('arrow-rotate')
     btn1.parentElement.classList.toggle('theme-active')
@@ -32,6 +33,7 @@ btn2.addEventListener('click', () => {
         btn1.children[0].classList.remove('arrow-rotate')
         btn1.parentElement.classList.remove('theme-active')
         btn1.classList.remove('btn-active')
+        tg1.classList.remove("tg1")
     }
     btn2.children[0].classList.toggle('arrow-rotate')
     btn2.parentElement.classList.toggle('theme-active')
