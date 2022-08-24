@@ -110,6 +110,15 @@ body {
          border: 1px solid rgba(0,0,0,1);
 }
 
+@media (max-width:500px) {
+    .theme-2 .container:hover {
+        box-shadow: 0px 0px 0px 8px #000000,
+         0px 0px 0px 16px #4B4C4B,
+             9px 0px 0px 0px rgba(0,0,0,0);
+             border: 1px solid rgba(0,0,0,1);
+    }
+}
+
 .qr-code {
     margin-bottom: 3rem;
     background-color: #289FED;
