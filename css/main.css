@@ -1,0 +1,282 @@
+:root {
+/* ## Colors */
+
+--White: #ffffff;
+--Light-gray: #d6e2f0;
+--Grayish-blue: #7b879d;
+--Dark-blue: #1f3251;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes enter-left {
+    from {
+        transform: translateX(-10rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    transition: all 1s;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(-45deg, #d6e2f0, #aac1e9, #5c94f0, #1f3251);
+    animation: gradient 5s ease infinite;
+    background-size: 400% 400%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-1 {
+    background: linear-gradient(-45deg, #009245 0%, #FCEE21 50%, #00A8C5 75%, #D9E021 100%);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+}
+
+.theme-2 {
+    background: linear-gradient(-45deg, rgba(198,190,189,1) 0%, rgba(0,0,0,1) 75%, rgba(198,190,189,1) 100%);
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+}
+
+.container {
+    width: 100%;
+    max-width: 33rem;
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid var(--Dark-blue);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 1.5s;
+    animation: enter-left 1s ease-in;
+}
+
+.theme-1 .container {
+    border: 1px solid #00A8C5;
+    background-color: #083b20;
+}
+.theme-2 .container {
+    border: 1px solid rgba(198,190,189,1);
+    background-color: rgba(0,0,0,1);
+}
+
+.container:hover {
+    box-shadow: 5px 5px 0px 0px #289FED,
+     10px 10px 0px 0px #5FB8FF,
+      15px 15px 0px 0px #A1D8FF,
+       20px 20px 0px 0px #CAE6FF,
+        25px 25px 0px 0px #E1EEFF,
+         5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+.theme-1 .container:hover {
+    box-shadow: -5px -5px 30px 5px #009245, 5px 5px 30px 5px #FCEE21
+}
+.theme-2 .container:hover {
+    box-shadow: 0px 0px 0px 8px #000000,
+     0px 0px 0px 16px #4B4C4B,
+      0px 0px 0px 24px #828482,
+       0px 0px 0px 31px #B2B5B2,
+        0px 0px 0px 39px #DADDDA,
+         9px 0px 0px 0px rgba(0,0,0,0);
+         border: 1px solid rgba(0,0,0,1);
+}
+
+.qr-code {
+    margin-bottom: 3rem;
+    background-color: #289FED;
+    border-radius: 10px;
+}
+.theme-1 .qr-code {
+    background-color: #009245;
+}
+.theme-2 .qr-code {
+    background-color: #4B4C4B;
+}
+
+.qr-code img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: all 1s;
+    border: 1px solid var(--Dark-blue);
+}
+.qr-code img:hover {
+    opacity: 0.8;
+}
+
+.theme-1 .qr-code img {
+    border: 1px solid #00A8C5;
+}
+.theme-2 .qr-code img {
+    border: 1px solid rgba(198,190,189,1);
+}
+
+.qr-code img:hover {
+    transform: scale(1.147) rotate(180deg);
+    border-radius: 15px;
+    box-shadow: rgba(31, 50, 81, 0.45) 0px -25px 45px -20px;
+}
+.theme-1 .qr-code img:hover {
+    box-shadow: #009245 0px -25px 45px -20px;
+}
+.theme-2 .qr-code img:hover {
+    box-shadow: #4B4C4B 0px -25px 45px -20px;
+}
+
+.text {
+    text-align: center;
+}
+
+.text h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    transition: all 1s;
+    background-image: linear-gradient(315deg, #289FED 0%, #A1D8FF 50%, #289FED 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 100%;
+    transition: all .4s ease-in-out;
+}
+.text h1:hover {
+    background-position: 100% 0;
+}
+
+.theme-1 .text h1 {
+    background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.theme-2 .text h1 {
+    background-image: linear-gradient(315deg, rgba(198,190,189,1) 0%, rgb(34, 31, 31) 50%, rgba(198,190,189,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--Grayish-blue);
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.text p span, .tg-colorful, .tg-bw {
+    text-transform: uppercase;
+    background-image: linear-gradient(315deg, #289FED 0%, #A1D8FF 50%, #289FED 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    background-size: 300% 100%;
+    transition: all .4s ease-in-out;
+}
+.text p span:hover, .tg-colorful:hover, .tg-bw:hover {
+    background-position: 100% 0;
+}
+
+.theme-1 .text p span {
+    background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+}
+
+.theme-2 .text p span{
+    background-image: linear-gradient(315deg, rgba(198,190,189,1) 0%, rgb(34, 31, 31) 50%, rgba(198,190,189,1) 100%);
+}
+
+.themes {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.themes .t1 , .themes .t2{
+    width: 7rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid var(--Dark-blue);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.themes .t1 {
+    background-color: #009245;
+}
+.themes .t2 {
+    background-color: gray;
+}
+
+.themes .theme .colorful, .themes .theme .bw {
+    width: 3.7rem;
+    height: 3.7rem;
+    margin: 0 0.1rem;
+    border: 1px solid var(--Dark-blue);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 4px 0px 0px 0px var(--Dark-blue);
+    transition: all 1s;
+}
+.themes .theme .colorful {
+    background: linear-gradient(-45deg, #009245 0%, #FCEE21 50%, #00A8C5 75%, #D9E021 100%);
+}
+
+.themes .theme .bw {
+    background: linear-gradient(-45deg, rgba(198,190,189,1) 0%, rgba(0,0,0,1) 75%, rgba(198,190,189,1) 100%);
+}
+
+.themes .theme .colorful img, .themes .theme .bw img {
+    max-width: 100%;
+    padding: 0.2rem;
+    transition: all .5s;
+}
+.themes .theme .bw img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(13%) saturate(0%) hue-rotate(318deg) brightness(101%) contrast(102%);
+}
+
+.arrow-rotate {
+    transform: rotate(180deg);
+}
+
+.themes .theme-active .btn-active {
+    box-shadow: -4px 0px 0px 0px var(--Dark-blue); 
+    margin-left: 3rem;
+}
+.tg1 {
+    background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+}
+.tg2 {
+    background-image: linear-gradient(315deg, rgba(198,190,189,1) 0%, rgb(34, 31, 31) 50%, rgba(198,190,189,1) 100%);
+}
